@@ -53,7 +53,7 @@ class NativeHost:
         self.server.bind((HOST, PORT))
         self.server.listen(4)
         self.server.settimeout(1.0)
-        # Write lock file so CLI knows we're alive
+        # Write lock file so CLI knows I'm alive
         with open(LOCK_FILE, "w") as f:
             f.write(str(PORT))
         while self.running:

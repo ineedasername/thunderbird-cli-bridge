@@ -341,7 +341,7 @@ browser.accounts.list(
 let accounts = await browser.accounts.list(true);
 for (let acct of accounts) {
   console.log(acct.id, acct.name, acct.type);
-  // acct.rootFolder.subFolders is populated because we passed true
+  // acct.rootFolder.subFolders is populated because I passed true
   for (let folder of acct.rootFolder.subFolders) {
     console.log("  ", folder.name, folder.specialUse, folder.id);
   }
