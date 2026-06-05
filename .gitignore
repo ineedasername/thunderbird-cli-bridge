@@ -1,0 +1,56 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+.installed.cfg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Compiled / binary Python
+*.pyd
+*.so
+
+# --- Native artifacts / data (none expected here, but guard anyway) ---
+*.db
+*.sqlite
+*.sqlite3
+*.npz
+*.npy
+
+# --- Build/runtime artifacts specific to this project ---
+# Packaged extension is a build artifact — rebuild from extension/ with `zip`.
+# (Comment the next line out if you intentionally want to ship the .xpi.)
+*.xpi
+
+# Per-machine native host lock file (lives in $HOME, but ignore if it lands here)
+.tbcli_host.lock
+
+# --- Secrets / credentials (defense in depth — none currently in repo) ---
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+credentials.json
+*token*
+*secret*
+
+# --- Editor / OS cruft ---
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- Rust (not used here, included for parity with portfolio conventions) ---
+target/

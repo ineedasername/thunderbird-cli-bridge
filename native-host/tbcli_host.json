@@ -1,0 +1,9 @@
+{
+  "name": "tbcli_host",
+  "description": "tbcli native messaging host",
+  "path": "REPLACE_ME_RUN_tbcli_setup",
+  "type": "stdio",
+  "allowed_extensions": [
+    "tbcli-bridge@localhost"
+  ]
+}

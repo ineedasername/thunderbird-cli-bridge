@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "tbcli Bridge",
+  "version": "1.0.0",
+  "description": "CLI bridge for Thunderbird mail APIs",
+  "author": "James",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tbcli-bridge@localhost",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "messagesRead",
+    "messagesMove",
+    "messagesDelete",
+    "messagesUpdate",
+    "messagesTags",
+    "accountsRead",
+    "accountsIdentities",
+    "compose",
+    "compose.send",
+    "nativeMessaging"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
