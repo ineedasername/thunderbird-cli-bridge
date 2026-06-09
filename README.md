@@ -1,5 +1,7 @@
 # tbcli — Thunderbird CLI Bridge
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **A command-line interface to your Thunderbird mailbox — built to be driven by an AI agent.** It bridges the gap when a Google Workspace (or other) admin blocks App Passwords and third-party OAuth, so there is no credential to script with: Thunderbird already holds your authenticated session, and this exposes it to the terminal as a clean, JSON-first, **self-describing** tool — so an agent (or you) can read, search, send, organize, and script your mail without ever touching a credential. The interface was designed agent-first: every command emits JSON, and `tbcli commands` hands an LLM a machine-readable contract of the whole tool.
 
 > **What it demonstrates:** end-to-end systems plumbing across four runtimes in one small project — a Python CLI, a long-lived Python native-messaging host, a Thunderbird MV3 WebExtension, and a localhost TCP bridge between them — plus a pragmatic "auth lives in the app, not in my code" security posture and a JSON-first, agent-friendly interface design. It is a focused integration artifact, built to solve a real blocker.
@@ -114,6 +116,17 @@ pyproject.toml    Packaging / console-script entry point
 - **No credentials in this repo.** All mail authentication lives inside Thunderbird; `tbcli` never sees a password, token, or OAuth grant. That is the entire point of the design.
 - The native host binds to **loopback only** (`127.0.0.1`). It does not accept remote connections.
 - `tbcli setup` writes a machine-specific absolute path into `native-host/tbcli_host.json` and an `HKCU` registry value. The checked-in manifest ships with a **placeholder path** — running `setup` rewrites it for your machine.
+
+## Citation
+
+```bibtex
+@software{davison2026tbcli,
+  author = {Davison, James J.},
+  title  = {tbcli: a Thunderbird CLI bridge for agent-driven mail access},
+  year   = {2026},
+  url    = {https://github.com/ineedasername/thunderbird-cli-bridge}
+}
+```
 
 ## License
 
