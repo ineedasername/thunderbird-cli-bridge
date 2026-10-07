@@ -133,5 +133,3 @@ pyproject.toml    Packaging / console-script entry point
 MIT — see [LICENSE](LICENSE).
 
 ---
-
-*Built by **James J. Davison**, with Claude (Anthropic) as coding collaborator, as a focused integration tool to unblock terminal/agent mail access in a locked-down auth environment. **Responsibility for the code and its design choices rests with the human author.** Original work; not a fork.*
